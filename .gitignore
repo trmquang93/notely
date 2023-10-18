@@ -1,0 +1,14 @@
+vendor
+Resources.zip
+Pods
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
+PodBuilder/.pod_builder
+PodBuilder/dSYM
+PodBuilder/Prebuilt
+fastlane/report.xml
+*.xcbkptlist
+*.orig
+*xcuserdata
