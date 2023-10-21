@@ -9,13 +9,15 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = self.window ?? UIWindow()
+        self.window = window
+        
+        NTApplication.shared.configMainInterface(in: window)
+        
+        window.makeKeyAndVisible()
         return true
     }
 }
-

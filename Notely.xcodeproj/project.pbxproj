@@ -8,22 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		1B9A0AF1F87182A467615203 /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D23C3F3CC03472B88725310 /* Pods_Notely.framework */; };
+		1BDC3C292AE423F00017225F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C282AE423F00017225F /* R.generated.swift */; };
 		1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE5DF842AE03E37003C8844 /* AppDelegate.swift */; };
-		1BE5DF892AE03E37003C8844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE5DF882AE03E37003C8844 /* ViewController.swift */; };
 		1BE5DF8E2AE03E38003C8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */; };
 		1BE5DF912AE03E38003C8844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5DF8F2AE03E38003C8844 /* LaunchScreen.storyboard */; };
+		1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2E62AE3FB6700FC5D95 /* Application.swift */; };
+		1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2E82AE3FBBA00FC5D95 /* NTApplicationNavigator.swift */; };
+		1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2EE2AE3FECA00FC5D95 /* NTNoteViewController.swift */; };
+		1BEBB2F22AE3FECA00FC5D95 /* NTNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2EF2AE3FECA00FC5D95 /* NTNoteViewModel.swift */; };
+		1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2F02AE3FECA00FC5D95 /* NTNoteNavigator.swift */; };
+		1BEBB2F72AE4041E00FC5D95 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBB2F62AE4041E00FC5D95 /* CoreText.framework */; };
+		1BEBB2F92AE4042900FC5D95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBB2F82AE4042900FC5D95 /* CoreGraphics.framework */; };
+		1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB2FD2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift */; };
+		1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */; };
+		1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */; };
+		1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BEBB2CE2AE3FB1300FC5D95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
+		1BDC3C282AE423F00017225F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		1BE5DF812AE03E37003C8844 /* Notely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE5DF842AE03E37003C8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BE5DF882AE03E37003C8844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE5DF902AE03E38003C8844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE5DF922AE03E38003C8844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BEBB2E62AE3FB6700FC5D95 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		1BEBB2E82AE3FBBA00FC5D95 /* NTApplicationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTApplicationNavigator.swift; sourceTree = "<group>"; };
+		1BEBB2EE2AE3FECA00FC5D95 /* NTNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteViewController.swift; sourceTree = "<group>"; };
+		1BEBB2EF2AE3FECA00FC5D95 /* NTNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteViewModel.swift; sourceTree = "<group>"; };
+		1BEBB2F02AE3FECA00FC5D95 /* NTNoteNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteNavigator.swift; sourceTree = "<group>"; };
+		1BEBB2F62AE4041E00FC5D95 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1BEBB2F82AE4042900FC5D95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BEBB2FD2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteViewModel+TypingAttributes.swift"; sourceTree = "<group>"; };
+		1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Fonts.swift"; sourceTree = "<group>"; };
+		1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+.swift"; sourceTree = "<group>"; };
+		1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		4D23C3F3CC03472B88725310 /* Pods_Notely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F43D15FBD674B240A7191FF /* Pods-VIPArchitechture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitechture.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitechture/Pods-VIPArchitechture.debug.xcconfig"; sourceTree = "<group>"; };
+		8A9482E102A6CA13812B3C47 /* Pods-VIPArchitechture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitechture.release.xcconfig"; path = "Target Support Files/Pods-VIPArchitechture/Pods-VIPArchitechture.release.xcconfig"; sourceTree = "<group>"; };
 		96946B94CC2B185AC1BC0059 /* Pods-Notely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.release.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.release.xcconfig"; sourceTree = "<group>"; };
+		9A5596EFA4039B70FE78DA4E /* Pods_VIPArchitechture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPArchitechture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEBB2F92AE4042900FC5D95 /* CoreGraphics.framework in Frameworks */,
+				1BEBB2F72AE4041E00FC5D95 /* CoreText.framework in Frameworks */,
 				1B9A0AF1F87182A467615203 /* Pods_Notely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +81,7 @@
 		1BE5DF782AE03E36003C8844 = {
 			isa = PBXGroup;
 			children = (
+				1BDC3C282AE423F00017225F /* R.generated.swift */,
 				1BE5DF832AE03E37003C8844 /* Notely */,
 				1BE5DF822AE03E37003C8844 /* Products */,
 				805BB929ED26F19834F54558 /* Pods */,
@@ -59,8 +100,10 @@
 		1BE5DF832AE03E37003C8844 /* Notely */ = {
 			isa = PBXGroup;
 			children = (
+				1BEBB2FA2AE4063300FC5D95 /* Extensions */,
+				1BEBB2EB2AE3FEB300FC5D95 /* Scenes */,
+				1BEBB2E52AE3FB5200FC5D95 /* Application */,
 				1BE5DF842AE03E37003C8844 /* AppDelegate.swift */,
-				1BE5DF882AE03E37003C8844 /* ViewController.swift */,
 				1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */,
 				1BE5DF8F2AE03E38003C8844 /* LaunchScreen.storyboard */,
 				1BE5DF922AE03E38003C8844 /* Info.plist */,
@@ -68,20 +111,62 @@
 			path = Notely;
 			sourceTree = "<group>";
 		};
+		1BEBB2E52AE3FB5200FC5D95 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBB2E62AE3FB6700FC5D95 /* Application.swift */,
+				1BEBB2E82AE3FBBA00FC5D95 /* NTApplicationNavigator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1BEBB2EB2AE3FEB300FC5D95 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBB2EC2AE3FEB600FC5D95 /* Note */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1BEBB2EC2AE3FEB600FC5D95 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBB2EE2AE3FECA00FC5D95 /* NTNoteViewController.swift */,
+				1BEBB2EF2AE3FECA00FC5D95 /* NTNoteViewModel.swift */,
+				1BEBB2F02AE3FECA00FC5D95 /* NTNoteNavigator.swift */,
+				1BEBB2FD2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		1BEBB2FA2AE4063300FC5D95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */,
+				1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */,
+				1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		805BB929ED26F19834F54558 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */,
 				96946B94CC2B185AC1BC0059 /* Pods-Notely.release.xcconfig */,
+				6F43D15FBD674B240A7191FF /* Pods-VIPArchitechture.debug.xcconfig */,
+				8A9482E102A6CA13812B3C47 /* Pods-VIPArchitechture.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		E9A539048EF47BAB60EFFD27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BEBB2F82AE4042900FC5D95 /* CoreGraphics.framework */,
+				1BEBB2F62AE4041E00FC5D95 /* CoreText.framework */,
 				4D23C3F3CC03472B88725310 /* Pods_Notely.framework */,
+				9A5596EFA4039B70FE78DA4E /* Pods_VIPArchitechture.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,9 +179,13 @@
 			buildConfigurationList = 1BE5DF952AE03E38003C8844 /* Build configuration list for PBXNativeTarget "Notely" */;
 			buildPhases = (
 				022288989D804880E7FC0722 /* [CP] Check Pods Manifest.lock */,
+				1BEBB3102AE4212B00FC5D95 /* rswift */,
+				1BDC3C2A2AE4251D0017225F /* swiftlint */,
 				1BE5DF7D2AE03E37003C8844 /* Sources */,
 				1BE5DF7E2AE03E37003C8844 /* Frameworks */,
 				1BE5DF7F2AE03E37003C8844 /* Resources */,
+				1BEBB2CE2AE3FB1300FC5D95 /* Embed Frameworks */,
+				2449D23A4B81A216820A17BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,6 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = NT;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
@@ -175,6 +265,61 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1BDC3C2A2AE4251D0017225F /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		1BEBB3102AE4212B00FC5D95 /* rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = rswift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		2449D23A4B81A216820A17BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notely/Pods-Notely-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notely/Pods-Notely-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Notely/Pods-Notely-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -182,8 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE5DF892AE03E37003C8844 /* ViewController.swift in Sources */,
+				1BEBB2F22AE3FECA00FC5D95 /* NTNoteViewModel.swift in Sources */,
+				1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */,
+				1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */,
+				1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */,
+				1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */,
+				1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */,
 				1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */,
+				1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */,
+				1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */,
+				1BDC3C292AE423F00017225F /* R.generated.swift in Sources */,
+				1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -310,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -329,13 +483,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46V49RQ8KU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notely/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,13 +513,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46V49RQ8KU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notely/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,3 +1,83 @@
-PODFILE CHECKSUM: 2dd248b5b15a88a9d704f22944db6a72fce4e861
+PODS:
+  - Domain (0.1.0):
+    - RealmSwift
+    - RxCocoa
+    - RxSwift
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - Platform (0.1.0):
+    - Domain
+    - RxCocoa
+    - RxRealm
+    - RxSwift
+  - R.swift (7.3.2)
+  - Realm (10.43.0):
+    - Realm/Headers (= 10.43.0)
+  - Realm/Headers (10.43.0)
+  - RealmSwift (10.43.0):
+    - Realm (= 10.43.0)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
+  - RxRealm (5.0.4):
+    - Realm (~> 10.21)
+    - RealmSwift (~> 10.21)
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - SteviaLayout (5.1.2)
+  - SwiftLint (0.53.0)
+  - VIPArchitechture (0.1.0):
+    - RxCocoa
+
+DEPENDENCIES:
+  - Domain (from `Domain`)
+  - "NSObject+Rx"
+  - Platform (from `Platform`)
+  - R.swift
+  - RxCocoa
+  - SteviaLayout
+  - SwiftLint
+  - VIPArchitechture (from `VIPArchitechture`)
+
+SPEC REPOS:
+  trunk:
+    - "NSObject+Rx"
+    - R.swift
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxRealm
+    - RxRelay
+    - RxSwift
+    - SteviaLayout
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  Domain:
+    :path: Domain
+  Platform:
+    :path: Platform
+  VIPArchitechture:
+    :path: VIPArchitechture
+
+SPEC CHECKSUMS:
+  Domain: 90e34e301420e69243ac4c99484878775296dbf1
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  Platform: e1de082161f44f441d159f126123361b2f0569e6
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  Realm: fc65bea3f5c3da2ecdc76324f180e054e7cf4eb0
+  RealmSwift: a7d48361c585769690c175428cc2bf15e1074444
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  SteviaLayout: 05424e528d643657d39ce72c786e4adf13cfc5f2
+  SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
+  VIPArchitechture: ff1a42ef826dbe637b6a79e976d9b8e48205974e
+
+PODFILE CHECKSUM: dbf03c02e6419c33a9e1c85cebe8a035f3b11114
 
 COCOAPODS: 1.13.0
