@@ -26,8 +26,8 @@ extension NTNoteViewModel: ViewModelType {
             text: input.attributedString))
         
         return .init(
-            attributedString: .empty(),
-            typingAttributes: handleTypingAttributes.attributes.asDriver()
+            attributedString: handleTypingAttributes.text.asDriver(),
+            typingAttributes: handleTypingAttributes.typingAttributes.asDriver()
         )
     }
 }

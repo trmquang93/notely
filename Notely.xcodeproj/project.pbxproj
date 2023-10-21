@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1B9A0AF1F87182A467615203 /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D23C3F3CC03472B88725310 /* Pods_Notely.framework */; };
 		1BDC3C292AE423F00017225F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C282AE423F00017225F /* R.generated.swift */; };
+		1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */; };
+		1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */; };
+		1BDC3C312AE430320017225F /* NTNoteListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */; };
+		1BDC3C342AE43ECB0017225F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BDC3C332AE43ECB0017225F /* Localizable.strings */; };
 		1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE5DF842AE03E37003C8844 /* AppDelegate.swift */; };
 		1BE5DF8E2AE03E38003C8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */; };
 		1BE5DF912AE03E38003C8844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5DF8F2AE03E38003C8844 /* LaunchScreen.storyboard */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
 		1BDC3C282AE423F00017225F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewController.swift; sourceTree = "<group>"; };
+		1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewModel.swift; sourceTree = "<group>"; };
+		1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListNavigator.swift; sourceTree = "<group>"; };
+		1BDC3C332AE43ECB0017225F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1BE5DF812AE03E37003C8844 /* Notely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE5DF842AE03E37003C8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BDC3C2B2AE430210017225F /* NoteList */ = {
+			isa = PBXGroup;
+			children = (
+				1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */,
+				1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */,
+				1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */,
+			);
+			path = NoteList;
+			sourceTree = "<group>";
+		};
+		1BDC3C322AE43EAC0017225F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				1BDC3C332AE43ECB0017225F /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		1BE5DF782AE03E36003C8844 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +126,7 @@
 		1BE5DF832AE03E37003C8844 /* Notely */ = {
 			isa = PBXGroup;
 			children = (
+				1BDC3C322AE43EAC0017225F /* Localizable */,
 				1BEBB2FA2AE4063300FC5D95 /* Extensions */,
 				1BEBB2EB2AE3FEB300FC5D95 /* Scenes */,
 				1BEBB2E52AE3FB5200FC5D95 /* Application */,
@@ -123,6 +150,7 @@
 		1BEBB2EB2AE3FEB300FC5D95 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1BDC3C2B2AE430210017225F /* NoteList */,
 				1BEBB2EC2AE3FEB600FC5D95 /* Note */,
 			);
 			path = Scenes;
@@ -236,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE5DF912AE03E38003C8844 /* LaunchScreen.storyboard in Resources */,
+				1BDC3C342AE43ECB0017225F /* Localizable.strings in Resources */,
 				1BE5DF8E2AE03E38003C8844 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,12 +358,15 @@
 			files = (
 				1BEBB2F22AE3FECA00FC5D95 /* NTNoteViewModel.swift in Sources */,
 				1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */,
+				1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */,
 				1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */,
 				1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */,
 				1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */,
 				1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */,
 				1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */,
 				1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */,
+				1BDC3C312AE430320017225F /* NTNoteListNavigator.swift in Sources */,
+				1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */,
 				1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */,
 				1BDC3C292AE423F00017225F /* R.generated.swift in Sources */,
 				1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */,

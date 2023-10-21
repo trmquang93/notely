@@ -8,13 +8,13 @@
 import UIKit
 import VIPArchitechture
 
-protocol NTApplicationNavigatorType: NavigatorType, NTMakeNote {
+protocol NTApplicationNavigatorType: NavigatorType, NTMakeNoteList {
     
 }
 
 struct NTApplicationNavigator: NTApplicationNavigatorType {
     func makeViewController() -> UIViewController {
-        let root = makeNote()
+        let root = makeNoteList()
         
         return UINavigationController(rootViewController: root.makeViewController())
     }

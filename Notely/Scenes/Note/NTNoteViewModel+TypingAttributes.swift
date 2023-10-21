@@ -16,19 +16,11 @@ extension NTNoteViewModel {
     }
     
     struct TypingAttributesOutput {
-        let attributes: Observable<TextAttributes>
+        let text: Observable<NSAttributedString>
+        let typingAttributes: Observable<TextAttributes>
     }
     
     func handleTypingAttributes(input: TypingAttributesInput) -> TypingAttributesOutput {
-        let numberOfLines = input.text
-            .map { 
-                $0.string
-                    .filter { $0 == "\n" }
-                    .count
-            }
-            .map { $0 + 1 }
-            .startWith(1)
-        
         var titleAttributes: TextAttributes {
             [
                 .font: UIFont.appFont(ofSize: 28),
@@ -36,16 +28,53 @@ extension NTNoteViewModel {
             ]
         }
         
-        var bodyAttributes: TextAttributes { 
+        var bodyAttributes: TextAttributes {
             [
                 .font: UIFont.appFont(ofSize: 14),
                 .foregroundColor: UIColor.AppColor.text
             ]
         }
         
-        let typingAttributes = numberOfLines
-            .map { $0 == 1 ? titleAttributes : bodyAttributes }
+        let startedNewLine = input.text
+            .map {
+                $0.string.hasSuffix("\n")
+            }
+            .filter { $0 }
+            .mapToVoid()
         
-        return .init(attributes: typingAttributes)
+        let calculatedText = input.text
+            .map { text -> NSAttributedString in
+                let mutable = NSMutableAttributedString(attributedString: text)
+                let rawText = mutable.string
+                if let endOfLine = rawText.range(of: "\n") {
+                    let startNewLine = rawText.distance(
+                        from: rawText.startIndex,
+                        to: endOfLine.lowerBound)
+                    let attributes = mutable.attributes(
+                        at: startNewLine, effectiveRange: nil)
+                    let textEnd = rawText.distance(
+                        from: endOfLine.lowerBound,
+                        to: rawText.endIndex)
+                    mutable.addAttributes(
+                        bodyAttributes,
+                        range: .init(location: startNewLine, length: textEnd))
+                } else {
+                    let firstLineEnd = rawText.distance(
+                        from: rawText.startIndex,
+                        to: rawText.endIndex)
+                    mutable.addAttributes(
+                        titleAttributes,
+                        range: .init(location: 0, length: firstLineEnd))
+                }
+                return mutable
+            }
+        
+        let typingAttributes = startedNewLine
+            .map { bodyAttributes }
+            .startWith(titleAttributes)
+        
+        return .init(
+            text: calculatedText,
+            typingAttributes: typingAttributes)
     }
 }
