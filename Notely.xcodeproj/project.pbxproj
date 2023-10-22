@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B38773A2AE59285001F227C /* NTNoteListViewModel+Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3877392AE59285001F227C /* NTNoteListViewModel+Edit.swift */; };
 		1B584F1A2AE5540B00F06922 /* RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F192AE5540B00F06922 /* RegisterCells.swift */; };
 		1B584F1C2AE554D900F06922 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F1B2AE554D900F06922 /* DateFormatter.swift */; };
 		1B584F1E2AE557DC00F06922 /* NTNoteListViewModel+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B3877392AE59285001F227C /* NTNoteListViewModel+Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+Edit.swift"; sourceTree = "<group>"; };
 		1B584F192AE5540B00F06922 /* RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCells.swift; sourceTree = "<group>"; };
 		1B584F1B2AE554D900F06922 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+Items.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */,
 				1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */,
 				1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */,
+				1B3877392AE59285001F227C /* NTNoteListViewModel+Edit.swift */,
 			);
 			path = NoteList;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */,
 				1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */,
 				1BDC3C292AE423F00017225F /* R.generated.swift in Sources */,
+				1B38773A2AE59285001F227C /* NTNoteListViewModel+Edit.swift in Sources */,
 				1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

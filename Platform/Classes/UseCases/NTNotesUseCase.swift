@@ -17,6 +17,7 @@ class NTNotesUseCase: Domain.NTNotesUseCase {
     func getNotes() -> Observable<AnyCollection<Domain.NTNote>> {
         return .create { obs in
             let listener = Self.firestore.collection("notes")
+                .order(by: "createDate", descending: true)
                 .addSnapshotListener { snapshot, error in
                     if let error = error {
                         obs.onError(error)
@@ -36,12 +37,9 @@ class NTNotesUseCase: Domain.NTNotesUseCase {
     }
     
     func saveNote(_ attributedString: NSAttributedString, createdDate: Date) -> Observable<Void> {
-        var documentAttributes: [NSAttributedString.DocumentAttributeKey: Any] = [:]
-        documentAttributes[.documentType] = NSAttributedString.DocumentType.html
-        let range = NSRange(location: 0, length: attributedString.length)
         var data: Data
         do {
-            data = try attributedString.data(from: range, documentAttributes: documentAttributes)
+            data = try attributedString.data(.rtfd)
         } catch {
             return .error(error)
         }

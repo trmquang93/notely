@@ -26,10 +26,17 @@ extension NTNoteListViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         let handleItems = self.handleItems(input: .init(searchText: .empty()))
         let newNote = self.handleCreateNew(input: .init(trigger: input.createNewTrigger))
+        let editNote = handleEdit(input: .init(
+            selected: input.selected))
         
+        let pushable = Observable.merge(
+            newNote.pushable,
+            editNote.pushable
+        )
         return .init(
             items: handleItems.items.asDriver(),
-            pushable: newNote.pushable.asSignal())
+            pushable: pushable.asSignal()
+        )
     }
 }
 
