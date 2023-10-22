@@ -71,21 +71,19 @@ extension NTNoteCell {
     
     private func setupViews() {
         selectionStyle = .none
-        
+        backgroundColor = .clear
         containerView.style {
-            $0.backgroundColor = .AppColor.secondaryBackground
+            $0.backgroundColor = R.color.secondaryBackground()
             $0.layer.cornerRadius = 20
             $0.clipsToBounds = true
         }
         
         titleLabel.style {
             $0.font = .boldAppFont(ofSize: 18)
-            $0.textColor = .AppColor.text
         }
         
         timeStampLabel.style {
             $0.font = .appFont(ofSize: 12)
-            $0.textColor = .AppColor.text
         }
     }
 }
@@ -101,26 +99,4 @@ struct NTNoteCellViewModel {
                 return R.string.localizable.last_edit_date(dateFormatted)
             }
     }
-}
-
-import SwiftUI
-fileprivate
-struct NoteListCell: UIViewRepresentable {
-    typealias UIViewType = NTNoteCell
-    
-    func makeUIView(context: Context) -> NTNoteCell {
-        return .init()
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        uiView.bind(viewModel: .init(
-            title: .just("Title"),
-            lastEditDate: .just(Date())))
-    }
-}
-
-#Preview {
-    NoteListCell()
-        .ignoresSafeArea()
-        .frame(maxWidth: .infinity, maxHeight: 120)
 }

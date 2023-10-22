@@ -12,9 +12,3 @@ extension UIColor {
         
     }
 }
-
-extension UIColor.AppColor {
-    static var text: UIColor { R.color.text()! }
-    static var accent: UIColor { R.color.accentColor()! }
-    static var secondaryBackground: UIColor { R.color.secondaryBackground()! }
-}

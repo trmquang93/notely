@@ -31,7 +31,7 @@ extension NTNoteViewModel {
         var titleAttributes: TextAttributes {
             [
                 .font: UIFont.appFont(ofSize: 28),
-                .foregroundColor: UIColor.AppColor.text,
+                .foregroundColor: R.color.text()!,
                 .paragraphStyle: titleStyle
             ]
         }
@@ -39,7 +39,7 @@ extension NTNoteViewModel {
         var bodyAttributes: TextAttributes {
             [
                 .font: UIFont.appFont(ofSize: 14),
-                .foregroundColor: UIColor.AppColor.text
+                .foregroundColor: R.color.text()!
             ]
         }
         

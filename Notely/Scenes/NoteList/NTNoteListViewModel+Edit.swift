@@ -31,10 +31,12 @@ extension NTNoteListViewModel {
         let note = noteSelected
             .map { noteSelected in
                 let note = navigator.makeNote()
-                if let string = try? NSAttributedString(
+                if let string = try? NSMutableAttributedString(
                     data: noteSelected.content,
                     documentType: .rtfd) {
-                    
+                    let textRange = NSRange(location: 0, length: string.length)
+                    string.addAttributes([.foregroundColor: R.color.text()!], range: textRange)
+//                    string.addAttributes(range: <#T##NSRange#>)
                     note.accept(input: .init(content: .just(string)))
                 }
                 return note

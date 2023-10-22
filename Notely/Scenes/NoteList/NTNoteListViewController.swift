@@ -84,9 +84,11 @@ extension NTNoteListViewController {
     }
 
     private func setupViews() {
+        view.backgroundColor = R.color.background()
+        
         titleLabel.style {
             $0.font = .boldAppFont(ofSize: 24)
-            $0.textColor = .AppColor.accent
+            $0.textColor = R.color.accentColor()
             $0.text = R.string.localizable.home_title()
         }
         
@@ -100,6 +102,8 @@ extension NTNoteListViewController {
         
         tableView.style {
             $0.register(cell: NTNoteCell.self)
+            $0.backgroundColor = .clear
+            $0.separatorStyle = .none
         }
         
         tableView.rx.itemSelected
@@ -111,24 +115,4 @@ extension NTNoteListViewController {
         let titleItem = UIBarButtonItem(customView: titleLabel)
         navigationItem.leftBarButtonItem = titleItem
     }
-}
-
-import SwiftUI
-fileprivate
-struct NoteList: UIViewControllerRepresentable {
-    typealias UIViewControllerType = UIViewController
-    
-    func makeUIViewController(context: Context) -> UIViewControllerType {
-        return UINavigationController(
-            rootViewController: NTNoteListNavigator().makeViewController()
-        )
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
-}
-#Preview {
-    NoteList()
-        .ignoresSafeArea()
 }
