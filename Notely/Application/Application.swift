@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import FirebaseCore
 
 final class NTApplication {
     static let shared = NTApplication()
     
     private init () {
+        FirebaseApp.configure()
     }
     
     func configMainInterface(in window: UIWindow, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {

@@ -7,8 +7,9 @@
 
 import UIKit
 import VIPArchitechture
+import Platform
 
-protocol NTNoteListNavigatorType: NavigatorType {
+protocol NTNoteListNavigatorType: NavigatorType, NTMakeNote {
 }
 
 protocol NTMakeNoteList {
@@ -23,7 +24,8 @@ extension NTMakeNoteList {
 
 struct NTNoteListNavigator: NTNoteListNavigatorType {
     func makeViewController() -> UIViewController {
-        let viewModel = NTNoteListViewModel(navigator: self)
+        let useCase = UseCaseProvider.notes
+        let viewModel = NTNoteListViewModel(navigator: self, useCase: useCase)
         let viewController = NTNoteListViewController(viewModel: viewModel)
         return viewController
     }

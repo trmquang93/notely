@@ -15,6 +15,7 @@ target 'Notely' do
   pod 'NSObject+Rx'
   pod 'R.swift'
   pod 'SwiftLint'
+  pod 'MBProgressHUD'
 end
 
 post_install do |installer|

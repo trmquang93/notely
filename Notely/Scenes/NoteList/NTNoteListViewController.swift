@@ -15,6 +15,7 @@ class NTNoteListViewController: UIViewController {
     lazy var searchBar = UISearchBar()
     lazy var titleLabel = UILabel()
     lazy var tableView = UITableView()
+    lazy var createNewButton = UIButton()
     
     init(viewModel: NTNoteListViewModel) {
         self.viewModel = viewModel
@@ -31,9 +32,30 @@ class NTNoteListViewController: UIViewController {
         setupViews()
         bindViewModel()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.contentInset.bottom = (view.bounds.height - createNewButton.frame.minY)
+    }
 
     private func bindViewModel() {
-        let output = viewModel.transform(input: .init())
+        let selected = tableView.rx.itemSelected.map { $0.row }
+        let output = viewModel.transform(input: .init(
+            selected: selected,
+            createNewTrigger: createNewButton.rx.tap.asObservable()))
+        
+        output.items
+            .drive(tableView.rx.items) { tableView, index, item in
+                let indexPath = IndexPath(row: index, section: 0)
+                let cell = tableView.dequeueReusableCell(NTNoteCell.self, for: indexPath)
+                cell.bind(viewModel: item)
+                return cell
+            }
+            .disposed(by: rx.disposeBag)
+        
+        output.pushable
+            .emit(to: rx.pushable)
+            .disposed(by: rx.disposeBag)
     }
 }
 
@@ -42,8 +64,8 @@ extension NTNoteListViewController {
         view.subviews {
             searchBar
             tableView
+            createNewButton
         }
-        
         
         view.layout {
             searchBar
@@ -53,6 +75,11 @@ extension NTNoteListViewController {
         
         |-20-searchBar-20-|
         
+        createNewButton
+            .trailing(30)
+            .size(50)
+        
+        createNewButton.Bottom == view.safeAreaLayoutGuide.Bottom - 30
         searchBar.Top == view.safeAreaLayoutGuide.Top
     }
 
@@ -67,9 +94,19 @@ extension NTNoteListViewController {
             $0.backgroundImage = UIImage()
         }
         
-        tableView.style {
-            $0.backgroundColor = .darkGray
+        createNewButton.style {
+            $0.setImage(R.image.create_note(), for: .normal)
         }
+        
+        tableView.style {
+            $0.register(cell: NTNoteCell.self)
+        }
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: {[weak self] indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
         
         let titleItem = UIBarButtonItem(customView: titleLabel)
         navigationItem.leftBarButtonItem = titleItem
@@ -77,6 +114,7 @@ extension NTNoteListViewController {
 }
 
 import SwiftUI
+fileprivate
 struct NoteList: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
     

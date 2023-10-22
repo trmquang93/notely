@@ -14,6 +14,9 @@ extension UIFont {
     
     static func boldAppFont(ofSize fontSize: CGFloat = UIFont.systemFontSize) -> UIFont {
         return .boldSystemFont(ofSize: fontSize)
-        
+    }
+    
+    static func semiBoldAppFont(ofSize fontSize: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return .systemFont(ofSize: fontSize, weight: .semibold)
     }
 }

@@ -14,7 +14,9 @@ struct _R {
   let bundle: Foundation.Bundle
   var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
   var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func string(bundle: Foundation.Bundle) -> string {
@@ -29,7 +31,13 @@ struct _R {
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
+  func image(bundle: Foundation.Bundle) -> image {
+    .init(bundle: bundle)
+  }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func storyboard(bundle: Foundation.Bundle) -> storyboard {
@@ -55,7 +63,7 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 2 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
 
@@ -63,18 +71,34 @@ struct _R {
       ///
       /// Key: Home_title
       var home_title: RswiftResources.StringResource { .init(key: "Home_title", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
+
+      /// Value: Last edited %@
+      ///
+      /// Key: last_edit_date
+      var last_edit_date: RswiftResources.StringResource1<String> { .init(key: "last_edit_date", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
     }
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 2 colors.
+  /// This `_R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
 
+    /// Color `secondaryBackground`.
+    var secondaryBackground: RswiftResources.ColorResource { .init(name: "secondaryBackground", path: [], bundle: bundle) }
+
     /// Color `text`.
     var text: RswiftResources.ColorResource { .init(name: "text", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    let bundle: Foundation.Bundle
+
+    /// Image `create_note`.
+    var create_note: RswiftResources.ImageResource { .init(name: "create_note", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -103,6 +127,14 @@ struct _R {
         var _key: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations"], key: "_key") ?? "UISceneConfigurations" }
       }
     }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `GoogleService-Info.plist`.
+    var googleServiceInfoPlist: RswiftResources.FileResource { .init(name: "GoogleService-Info", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.storyboard` struct is generated, and contains static references to 1 storyboards.

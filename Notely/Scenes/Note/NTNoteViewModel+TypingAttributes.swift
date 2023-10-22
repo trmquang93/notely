@@ -21,10 +21,18 @@ extension NTNoteViewModel {
     }
     
     func handleTypingAttributes(input: TypingAttributesInput) -> TypingAttributesOutput {
+        let inputContent = navigator.input.flatMap { $0.content }
+            .share(replay: 1)
+        
+        let titleStyle = NSMutableParagraphStyle()
+        titleStyle.lineSpacing = 2
+        titleStyle.firstLineHeadIndent = 2
+        
         var titleAttributes: TextAttributes {
             [
                 .font: UIFont.appFont(ofSize: 28),
-                .foregroundColor: UIColor.AppColor.text
+                .foregroundColor: UIColor.AppColor.text,
+                .paragraphStyle: titleStyle
             ]
         }
         
@@ -74,7 +82,10 @@ extension NTNoteViewModel {
             .startWith(titleAttributes)
         
         return .init(
-            text: calculatedText,
+            text: .merge(
+                calculatedText,
+                inputContent
+            ),
             typingAttributes: typingAttributes)
     }
 }

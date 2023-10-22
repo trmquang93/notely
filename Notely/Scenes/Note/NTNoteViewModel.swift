@@ -13,9 +13,9 @@ import VIPArchitechture
 import Domain
 
 class NTNoteViewModel: HasDisposeBag {
-    let navigator: NTNoteNavigatorType
+    let navigator: any NTNoteNavigatorType
 
-    init(navigator: NTNoteNavigatorType) {
+    init(navigator: any NTNoteNavigatorType) {
         self.navigator = navigator
     }
 }
@@ -25,8 +25,14 @@ extension NTNoteViewModel: ViewModelType {
         let handleTypingAttributes = self.handleTypingAttributes(input: .init(
             text: input.attributedString))
         
+        let text = handleTypingAttributes.text.share(replay: 1)
+        
+        navigator.accept(output: .init(
+            finished: text
+        ))
+        
         return .init(
-            attributedString: handleTypingAttributes.text.asDriver(),
+            attributedString: text.asDriver(),
             typingAttributes: handleTypingAttributes.typingAttributes.asDriver()
         )
     }

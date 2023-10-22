@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B9A0AF1F87182A467615203 /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D23C3F3CC03472B88725310 /* Pods_Notely.framework */; };
+		1B584F1A2AE5540B00F06922 /* RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F192AE5540B00F06922 /* RegisterCells.swift */; };
+		1B584F1C2AE554D900F06922 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F1B2AE554D900F06922 /* DateFormatter.swift */; };
+		1B584F1E2AE557DC00F06922 /* NTNoteListViewModel+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */; };
+		1B584F222AE5733300F06922 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B584F212AE5733300F06922 /* GoogleService-Info.plist */; };
+		1B584F242AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */; };
+		1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */; };
+		1B84F1642AE54BFF0041D3AE /* NTNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84F1632AE54BFF0041D3AE /* NTNoteCell.swift */; };
 		1BDC3C292AE423F00017225F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C282AE423F00017225F /* R.generated.swift */; };
 		1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */; };
 		1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */; };
@@ -27,6 +33,7 @@
 		1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */; };
 		1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */; };
 		1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */; };
+		8499A9FBAC748064BB7E16FF /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +50,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
+		1B584F192AE5540B00F06922 /* RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCells.swift; sourceTree = "<group>"; };
+		1B584F1B2AE554D900F06922 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+Items.swift"; sourceTree = "<group>"; };
+		1B584F212AE5733300F06922 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+CreateNew.swift"; sourceTree = "<group>"; };
+		1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Ext.swift"; sourceTree = "<group>"; };
+		1B84F1632AE54BFF0041D3AE /* NTNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteCell.swift; sourceTree = "<group>"; };
 		1BDC3C282AE423F00017225F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewController.swift; sourceTree = "<group>"; };
 		1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewModel.swift; sourceTree = "<group>"; };
@@ -65,11 +78,9 @@
 		1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Fonts.swift"; sourceTree = "<group>"; };
 		1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+.swift"; sourceTree = "<group>"; };
 		1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
-		4D23C3F3CC03472B88725310 /* Pods_Notely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F43D15FBD674B240A7191FF /* Pods-VIPArchitechture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitechture.debug.xcconfig"; path = "Target Support Files/Pods-VIPArchitechture/Pods-VIPArchitechture.debug.xcconfig"; sourceTree = "<group>"; };
-		8A9482E102A6CA13812B3C47 /* Pods-VIPArchitechture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPArchitechture.release.xcconfig"; path = "Target Support Files/Pods-VIPArchitechture/Pods-VIPArchitechture.release.xcconfig"; sourceTree = "<group>"; };
-		96946B94CC2B185AC1BC0059 /* Pods-Notely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.release.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.release.xcconfig"; sourceTree = "<group>"; };
-		9A5596EFA4039B70FE78DA4E /* Pods_VIPArchitechture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPArchitechture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E90BFA4266843EAA8B7C16D /* Pods-Notely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.release.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.release.xcconfig"; sourceTree = "<group>"; };
+		84FDA5A503B3BE708D69CA1A /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
+		F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,19 +90,29 @@
 			files = (
 				1BEBB2F92AE4042900FC5D95 /* CoreGraphics.framework in Frameworks */,
 				1BEBB2F72AE4041E00FC5D95 /* CoreText.framework in Frameworks */,
-				1B9A0AF1F87182A467615203 /* Pods_Notely.framework in Frameworks */,
+				8499A9FBAC748064BB7E16FF /* Pods_Notely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B84F1622AE54AFF0041D3AE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1B84F1632AE54BFF0041D3AE /* NTNoteCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		1BDC3C2B2AE430210017225F /* NoteList */ = {
 			isa = PBXGroup;
 			children = (
 				1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */,
 				1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */,
 				1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */,
+				1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */,
+				1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */,
 			);
 			path = NoteList;
 			sourceTree = "<group>";
@@ -126,6 +147,7 @@
 		1BE5DF832AE03E37003C8844 /* Notely */ = {
 			isa = PBXGroup;
 			children = (
+				1B84F1622AE54AFF0041D3AE /* CustomViews */,
 				1BDC3C322AE43EAC0017225F /* Localizable */,
 				1BEBB2FA2AE4063300FC5D95 /* Extensions */,
 				1BEBB2EB2AE3FEB300FC5D95 /* Scenes */,
@@ -134,6 +156,7 @@
 				1BE5DF8D2AE03E38003C8844 /* Assets.xcassets */,
 				1BE5DF8F2AE03E38003C8844 /* LaunchScreen.storyboard */,
 				1BE5DF922AE03E38003C8844 /* Info.plist */,
+				1B584F212AE5733300F06922 /* GoogleService-Info.plist */,
 			);
 			path = Notely;
 			sourceTree = "<group>";
@@ -173,6 +196,9 @@
 				1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */,
 				1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */,
 				1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */,
+				1B584F192AE5540B00F06922 /* RegisterCells.swift */,
+				1B584F1B2AE554D900F06922 /* DateFormatter.swift */,
+				1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,10 +206,8 @@
 		805BB929ED26F19834F54558 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */,
-				96946B94CC2B185AC1BC0059 /* Pods-Notely.release.xcconfig */,
-				6F43D15FBD674B240A7191FF /* Pods-VIPArchitechture.debug.xcconfig */,
-				8A9482E102A6CA13812B3C47 /* Pods-VIPArchitechture.release.xcconfig */,
+				84FDA5A503B3BE708D69CA1A /* Pods-Notely.debug.xcconfig */,
+				4E90BFA4266843EAA8B7C16D /* Pods-Notely.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -193,8 +217,7 @@
 			children = (
 				1BEBB2F82AE4042900FC5D95 /* CoreGraphics.framework */,
 				1BEBB2F62AE4041E00FC5D95 /* CoreText.framework */,
-				4D23C3F3CC03472B88725310 /* Pods_Notely.framework */,
-				9A5596EFA4039B70FE78DA4E /* Pods_VIPArchitechture.framework */,
+				F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,14 +229,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BE5DF952AE03E38003C8844 /* Build configuration list for PBXNativeTarget "Notely" */;
 			buildPhases = (
-				022288989D804880E7FC0722 /* [CP] Check Pods Manifest.lock */,
+				28E7E9FEC69A0FF6F5163883 /* [CP] Check Pods Manifest.lock */,
 				1BEBB3102AE4212B00FC5D95 /* rswift */,
 				1BDC3C2A2AE4251D0017225F /* swiftlint */,
 				1BE5DF7D2AE03E37003C8844 /* Sources */,
 				1BE5DF7E2AE03E37003C8844 /* Frameworks */,
 				1BE5DF7F2AE03E37003C8844 /* Resources */,
 				1BEBB2CE2AE3FB1300FC5D95 /* Embed Frameworks */,
-				2449D23A4B81A216820A17BA /* [CP] Embed Pods Frameworks */,
+				49D564D0EA122CBE7A78D4EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +288,7 @@
 			files = (
 				1BE5DF912AE03E38003C8844 /* LaunchScreen.storyboard in Resources */,
 				1BDC3C342AE43ECB0017225F /* Localizable.strings in Resources */,
+				1B584F222AE5733300F06922 /* GoogleService-Info.plist in Resources */,
 				1BE5DF8E2AE03E38003C8844 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,30 +296,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		022288989D804880E7FC0722 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Notely-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1BDC3C2A2AE4251D0017225F /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -332,7 +335,29 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
-		2449D23A4B81A216820A17BA /* [CP] Embed Pods Frameworks */ = {
+		28E7E9FEC69A0FF6F5163883 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Notely-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D564D0EA122CBE7A78D4EF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,10 +382,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BEBB2F22AE3FECA00FC5D95 /* NTNoteViewModel.swift in Sources */,
+				1B84F1642AE54BFF0041D3AE /* NTNoteCell.swift in Sources */,
+				1B584F242AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift in Sources */,
 				1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */,
 				1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */,
 				1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */,
 				1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */,
+				1B584F1A2AE5540B00F06922 /* RegisterCells.swift in Sources */,
+				1B584F1E2AE557DC00F06922 /* NTNoteListViewModel+Items.swift in Sources */,
+				1B584F1C2AE554D900F06922 /* DateFormatter.swift in Sources */,
+				1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */,
 				1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */,
 				1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */,
 				1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */,
@@ -508,7 +539,7 @@
 		};
 		1BE5DF962AE03E38003C8844 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B1421FBFF42CDBAF3D5E995 /* Pods-Notely.debug.xcconfig */;
+			baseConfigurationReference = 84FDA5A503B3BE708D69CA1A /* Pods-Notely.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,7 +569,7 @@
 		};
 		1BE5DF972AE03E38003C8844 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96946B94CC2B185AC1BC0059 /* Pods-Notely.release.xcconfig */;
+			baseConfigurationReference = 4E90BFA4266843EAA8B7C16D /* Pods-Notely.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

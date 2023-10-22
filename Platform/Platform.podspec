@@ -47,6 +47,7 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Domain'
   s.dependency 'RxCocoa'
-  s.dependency 'RxSwift'
   s.dependency 'RxRealm'
+  s.dependency 'FirebaseCore'
+  s.dependency 'FirebaseFirestoreSwift'
 end
