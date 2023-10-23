@@ -16,6 +16,7 @@ target 'Notely' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'MBProgressHUD'
+  pod 'SwipeCellKit'
 end
 
 post_install do |installer|

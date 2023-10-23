@@ -1,11 +1,4 @@
-/* 
-  Localizable.strings
-  Notely
-
-  Created by Quang Tran on 22/10/2023.
-  
-*/
-
-
 "Home_title" = "Notely";
 "last_edit_date" = "Last edited %@";
+"delete_action" = "Delete";
+"success_toast" = "Success";

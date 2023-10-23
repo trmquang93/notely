@@ -84,4 +84,22 @@ class NTNotesUseCase: Domain.NTNotesUseCase {
             }
         }
     }
+    
+    func delete(_ note: Domain.NTNote) -> Observable<Void> {
+        let collectionRef = Self.firestore.collection("notes")
+        let docRef = collectionRef.document("\(note.createDate.timeIntervalSince1970)")
+        
+        return .create { obs in
+            docRef.delete { error in
+                if let error = error {
+                    obs.onError(error)
+                } else {
+                    obs.onNext(())
+                    obs.onCompleted()
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
 }

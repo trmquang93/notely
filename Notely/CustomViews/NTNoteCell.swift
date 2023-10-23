@@ -10,10 +10,10 @@ import RxSwift
 import RxCocoa
 import Stevia
 import NSObject_Rx
+import SwipeCellKit
 
 class NTNoteCell: UITableViewCell {
     var disposeBag = DisposeBag()
-    
     lazy var containerView = UIView()
     lazy var titleLabel = UILabel()
     lazy var timeStampLabel = UILabel()
@@ -32,6 +32,7 @@ class NTNoteCell: UITableViewCell {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
+    
 }
 
 extension NTNoteCell {
@@ -58,6 +59,7 @@ extension NTNoteCell {
         containerView
             .fillVertically(padding: 15)
             .fillHorizontally(padding: 30)
+            .height(77)
         
         containerView.layout {
             10
@@ -66,16 +68,18 @@ extension NTNoteCell {
             10
         }
         
-        titleLabel.Height == timeStampLabel.Height
+        (titleLabel.Height == timeStampLabel.Height).priority = .required
     }
     
     private func setupViews() {
+        
         selectionStyle = .none
         backgroundColor = .clear
+        
         containerView.style {
             $0.backgroundColor = R.color.secondaryBackground()
             $0.layer.cornerRadius = 20
-            $0.clipsToBounds = true
+//            $0.clipsToBounds = true
         }
         
         titleLabel.style {

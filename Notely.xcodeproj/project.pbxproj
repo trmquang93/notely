@@ -34,6 +34,10 @@
 		1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */; };
 		1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */; };
 		1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */; };
+		1BEBDF2C2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF2B2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift */; };
+		1BEBDF2F2AE6C75800BDBA66 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF2E2AE6C75700BDBA66 /* ActivityIndicator.swift */; };
+		1BEBDF312AE6C76B00BDBA66 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF302AE6C76B00BDBA66 /* ErrorTracker.swift */; };
+		1BEBDF382AE6C7F600BDBA66 /* NTToastNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */; };
 		8499A9FBAC748064BB7E16FF /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,10 @@
 		1BEBB3072AE412DA00FC5D95 /* UIFont+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Fonts.swift"; sourceTree = "<group>"; };
 		1BEBB3092AE413F800FC5D95 /* ObservableType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+.swift"; sourceTree = "<group>"; };
 		1BEBB30B2AE415E600FC5D95 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		1BEBDF2B2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+Delete.swift"; sourceTree = "<group>"; };
+		1BEBDF2E2AE6C75700BDBA66 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		1BEBDF302AE6C76B00BDBA66 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTToastNavigator.swift; sourceTree = "<group>"; };
 		4E90BFA4266843EAA8B7C16D /* Pods-Notely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.release.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.release.xcconfig"; sourceTree = "<group>"; };
 		84FDA5A503B3BE708D69CA1A /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
 		F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,7 @@
 				1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */,
 				1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */,
 				1B3877392AE59285001F227C /* NTNoteListViewModel+Edit.swift */,
+				1BEBDF2B2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift */,
 			);
 			path = NoteList;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 		1BE5DF832AE03E37003C8844 /* Notely */ = {
 			isa = PBXGroup;
 			children = (
+				1BEBDF2D2AE6C75000BDBA66 /* Helpers */,
 				1B84F1622AE54AFF0041D3AE /* CustomViews */,
 				1BDC3C322AE43EAC0017225F /* Localizable */,
 				1BEBB2FA2AE4063300FC5D95 /* Extensions */,
@@ -176,6 +186,7 @@
 		1BEBB2EB2AE3FEB300FC5D95 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1BEBDF322AE6C7EB00BDBA66 /* Toast */,
 				1BDC3C2B2AE430210017225F /* NoteList */,
 				1BEBB2EC2AE3FEB600FC5D95 /* Note */,
 			);
@@ -204,6 +215,23 @@
 				1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BEBDF2D2AE6C75000BDBA66 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBDF2E2AE6C75700BDBA66 /* ActivityIndicator.swift */,
+				1BEBDF302AE6C76B00BDBA66 /* ErrorTracker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1BEBDF322AE6C7EB00BDBA66 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		805BB929ED26F19834F54558 /* Pods */ = {
@@ -388,19 +416,23 @@
 				1B84F1642AE54BFF0041D3AE /* NTNoteCell.swift in Sources */,
 				1B584F242AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift in Sources */,
 				1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */,
+				1BEBDF2C2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift in Sources */,
 				1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */,
 				1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */,
 				1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */,
 				1B584F1A2AE5540B00F06922 /* RegisterCells.swift in Sources */,
 				1B584F1E2AE557DC00F06922 /* NTNoteListViewModel+Items.swift in Sources */,
+				1BEBDF382AE6C7F600BDBA66 /* NTToastNavigator.swift in Sources */,
 				1B584F1C2AE554D900F06922 /* DateFormatter.swift in Sources */,
 				1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */,
+				1BEBDF2F2AE6C75800BDBA66 /* ActivityIndicator.swift in Sources */,
 				1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */,
 				1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */,
 				1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */,
 				1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */,
 				1BDC3C312AE430320017225F /* NTNoteListNavigator.swift in Sources */,
 				1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */,
+				1BEBDF312AE6C76B00BDBA66 /* ErrorTracker.swift in Sources */,
 				1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */,
 				1BDC3C292AE423F00017225F /* R.generated.swift in Sources */,
 				1B38773A2AE59285001F227C /* NTNoteListViewModel+Edit.swift in Sources */,

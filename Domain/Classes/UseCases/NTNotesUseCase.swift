@@ -11,4 +11,5 @@ import RxSwift
 public protocol NTNotesUseCase {
     func getNotes() -> Observable<AnyCollection<NTNote>>
     func saveNote(_ data: NSAttributedString, createdDate: Date) -> Observable<Void>
+    func delete(_ note: NTNote) -> Observable<Void>
 }

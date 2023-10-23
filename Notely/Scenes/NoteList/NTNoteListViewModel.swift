@@ -28,6 +28,7 @@ extension NTNoteListViewModel: ViewModelType {
         let newNote = self.handleCreateNew(input: .init(trigger: input.createNewTrigger))
         let editNote = handleEdit(input: .init(
             selected: input.selected))
+        let delete = handleDelete(input: .init(trigger: input.deleteItem))
         
         let pushable = Observable.merge(
             newNote.pushable,
@@ -35,7 +36,10 @@ extension NTNoteListViewModel: ViewModelType {
         )
         return .init(
             items: handleItems.items.asDriver(),
-            pushable: pushable.asSignal()
+            pushable: pushable.asSignal(), 
+            popOver: delete.popOver.asSignal(),
+            loading: delete.loading.asDriver(),
+            error: delete.error.asSignal()
         )
     }
 }
@@ -45,10 +49,14 @@ extension NTNoteListViewModel {
         let selected: Observable<Int>
         let createNewTrigger: Observable<Void>
         let searchText: Observable<String?>
+        let deleteItem: Observable<Int>
     }
     
     struct Output {
         let items: Driver<AnyCollection<NTNoteCellViewModel>>
         let pushable: Signal<Pushable>
+        let popOver: Signal<PopOver>
+        let loading: Driver<Bool>
+        let error: Signal<Error>
     }
 }

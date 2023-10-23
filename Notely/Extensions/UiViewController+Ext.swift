@@ -125,14 +125,12 @@ public extension Reactive where Base: UIViewController {
 
 extension UIViewController {
     func showLoading(forView view: UIView, isLoading: Bool) {
-        DispatchQueue.main.async {
+        MBProgressHUD.hide(for: view, animated: true)
+        if isLoading {
+            MBProgressHUD.showAdded(to: view, animated: true)
+            //                hud.bezelView.style = .solidColor
+        } else {
             MBProgressHUD.hide(for: view, animated: true)
-            if isLoading {
-                let hud = MBProgressHUD.showAdded(to: view, animated: true)
-                hud.bezelView.style = .solidColor
-            } else {
-                MBProgressHUD.hide(for: view, animated: true)
-            }
         }
     }
     

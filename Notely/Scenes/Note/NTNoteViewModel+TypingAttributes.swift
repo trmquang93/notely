@@ -58,8 +58,7 @@ extension NTNoteViewModel {
                     let startNewLine = rawText.distance(
                         from: rawText.startIndex,
                         to: endOfLine.lowerBound)
-                    let attributes = mutable.attributes(
-                        at: startNewLine, effectiveRange: nil)
+                
                     let textEnd = rawText.distance(
                         from: endOfLine.lowerBound,
                         to: rawText.endIndex)

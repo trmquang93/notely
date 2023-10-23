@@ -764,6 +764,7 @@ PODS:
   - RxSwift (6.6.0)
   - SteviaLayout (5.1.2)
   - SwiftLint (0.53.0)
+  - SwipeCellKit (2.7.1)
   - VIPArchitechture (0.1.0):
     - RxCocoa
 
@@ -776,6 +777,7 @@ DEPENDENCIES:
   - RxCocoa
   - SteviaLayout
   - SwiftLint
+  - SwipeCellKit
   - VIPArchitechture (from `VIPArchitechture`)
 
 SPEC REPOS:
@@ -805,6 +807,7 @@ SPEC REPOS:
     - RxSwift
     - SteviaLayout
     - SwiftLint
+    - SwipeCellKit
 
 EXTERNAL SOURCES:
   Domain:
@@ -842,8 +845,9 @@ SPEC CHECKSUMS:
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SteviaLayout: 05424e528d643657d39ce72c786e4adf13cfc5f2
   SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
   VIPArchitechture: ff1a42ef826dbe637b6a79e976d9b8e48205974e
 
-PODFILE CHECKSUM: b12db1dd1c3766720e415721e71337e57b85daa1
+PODFILE CHECKSUM: bdbca180181b8308ddb0e5f29a7a51b4d94a410d
 
 COCOAPODS: 1.13.0

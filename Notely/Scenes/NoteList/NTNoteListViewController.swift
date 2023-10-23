@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Stevia
+import SwipeCellKit
 
 class NTNoteListViewController: UIViewController {
     let viewModel: NTNoteListViewModel
@@ -16,6 +17,8 @@ class NTNoteListViewController: UIViewController {
     lazy var titleLabel = UILabel()
     lazy var tableView = UITableView()
     lazy var createNewButton = UIButton()
+    
+    let deleteItem = PublishRelay<IndexPath>()
     
     init(viewModel: NTNoteListViewModel) {
         self.viewModel = viewModel
@@ -43,7 +46,9 @@ class NTNoteListViewController: UIViewController {
         let output = viewModel.transform(input: .init(
             selected: selected,
             createNewTrigger: createNewButton.rx.tap.asObservable(), 
-            searchText: searchBar.rx.text.asObservable()))
+            searchText: searchBar.rx.text.asObservable(),
+            deleteItem: deleteItem.map { $0.row }
+        ))
         
         output.items
             .drive(tableView.rx.items) { tableView, index, item in
@@ -57,6 +62,32 @@ class NTNoteListViewController: UIViewController {
         output.pushable
             .emit(to: rx.pushable)
             .disposed(by: rx.disposeBag)
+        
+        output.popOver
+            .emit(to: rx.popOver)
+            .disposed(by: rx.disposeBag)
+        
+        output.loading.drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
+        
+        output.error
+            .emit(to: rx.error)
+            .disposed(by: rx.disposeBag)
+    }
+}
+extension NTNoteListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(
+            style: .destructive,
+            title: "Delete") { [weak self] _, _, completion in
+                self?.deleteItem.accept(indexPath)
+                completion(true)
+            }
+        
+        let config = UISwipeActionsConfiguration(actions: [deleteAction])
+
+        return config
     }
 }
 
@@ -105,6 +136,7 @@ extension NTNoteListViewController {
             $0.register(cell: NTNoteCell.self)
             $0.backgroundColor = .clear
             $0.separatorStyle = .none
+            $0.delegate = self
         }
         
         tableView.rx.itemSelected
