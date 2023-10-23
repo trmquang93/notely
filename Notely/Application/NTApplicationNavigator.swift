@@ -8,14 +8,19 @@
 import UIKit
 import VIPArchitechture
 
-protocol NTApplicationNavigatorType: NavigatorType, NTMakeNoteList {
+protocol NTApplicationNavigatorType: NavigatorType, NTMakePhoneRoot, NTMakePadRoot {
     
 }
 
 struct NTApplicationNavigator: NTApplicationNavigatorType {
     func makeViewController() -> UIViewController {
-        let root = makeNoteList()
+        var root: NavigatorType
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            root = makePhoneRoot()
+        } else {
+            root = makePadRoot()
+        }
         
-        return UINavigationController(rootViewController: root.makeViewController())
+        return root.makeViewController()
     }
 }

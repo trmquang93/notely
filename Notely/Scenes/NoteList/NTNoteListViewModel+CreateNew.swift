@@ -15,7 +15,7 @@ extension NTNoteListViewModel {
     }
     
     struct CreateNewOutput {
-        let pushable: Observable<Pushable>
+        let content: Observable<NavigatorType>
     }
     
     func handleCreateNew(input: CreateNewInput) -> CreateNewOutput {
@@ -43,6 +43,6 @@ extension NTNoteListViewModel {
             .subscribe()
             .disposed(by: disposeBag)
         
-        return .init(pushable: newNote.map { $0 })
+        return .init(content: newNote.map { $0 })
     }
 }

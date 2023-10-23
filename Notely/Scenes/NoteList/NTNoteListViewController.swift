@@ -63,10 +63,6 @@ class NTNoteListViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-        output.pushable
-            .emit(to: rx.pushable)
-            .disposed(by: rx.disposeBag)
-        
         output.popOver
             .emit(to: rx.popOver)
             .disposed(by: rx.disposeBag)

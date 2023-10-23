@@ -68,6 +68,7 @@ extension NTNoteViewController {
     }
 
     private func setupViews() {
+        textView.backgroundColor = R.color.background()
         textView.allowsEditingTextAttributes = true
     }
 }

@@ -13,10 +13,10 @@ import VIPArchitechture
 import Domain
 
 class NTNoteListViewModel: HasDisposeBag {
-    let navigator: NTNoteListNavigatorType
+    let navigator: any NTNoteListNavigatorType
     let useCase: NTNotesUseCase
     
-    init(navigator: NTNoteListNavigatorType, useCase: NTNotesUseCase) {
+    init(navigator: any NTNoteListNavigatorType, useCase: NTNotesUseCase) {
         self.navigator = navigator
         self.useCase = useCase
     }
@@ -45,18 +45,20 @@ extension NTNoteListViewModel: ViewModelType {
         sort.sortOption.bind(to: sortOption)
             .disposed(by: disposeBag)
         
-        let pushable = Observable.merge(
-            newNote.pushable,
-            editNote.pushable
+        let content = Observable.merge(
+            newNote.content,
+            editNote.content
         )
         
         let popOver = Observable.merge(
             delete.popOver,
             sort.popOver
         )
+        
+        navigator.accept(output: .init(selected: content))
+        
         return .init(
             items: handleItems.items.asDriver(),
-            pushable: pushable.asSignal(), 
             popOver: popOver.asSignal(),
             loading: delete.loading.asDriver(),
             error: delete.error.asSignal()
@@ -76,7 +78,6 @@ extension NTNoteListViewModel {
     
     struct Output {
         let items: Driver<AnyCollection<NTNoteCellViewModel>>
-        let pushable: Signal<Pushable>
         let popOver: Signal<PopOver>
         let loading: Driver<Bool>
         let error: Signal<Error>
