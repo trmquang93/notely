@@ -42,7 +42,8 @@ class NTNoteListViewController: UIViewController {
         let selected = tableView.rx.itemSelected.map { $0.row }
         let output = viewModel.transform(input: .init(
             selected: selected,
-            createNewTrigger: createNewButton.rx.tap.asObservable()))
+            createNewTrigger: createNewButton.rx.tap.asObservable(), 
+            searchText: searchBar.rx.text.asObservable()))
         
         output.items
             .drive(tableView.rx.items) { tableView, index, item in
@@ -109,6 +110,25 @@ extension NTNoteListViewController {
         tableView.rx.itemSelected
             .subscribe(onNext: {[weak self] indexPath in
                 self?.tableView.deselectRow(at: indexPath, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        Observable
+            .merge(
+                searchBar.rx.textDidBeginEditing
+                    .map { true },
+                searchBar.rx.textDidEndEditing
+                    .map { false }
+            )
+            .subscribe(onNext: { [weak self] showCancel in
+                self?.searchBar.setShowsCancelButton(showCancel, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        searchBar.rx.cancelButtonClicked
+            .subscribe(onNext: { [weak self] in
+                self?.searchBar.text = nil
+                self?.searchBar.resignFirstResponder()
             })
             .disposed(by: rx.disposeBag)
         
