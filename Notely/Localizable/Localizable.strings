@@ -2,3 +2,6 @@
 "last_edit_date" = "Last edited %@";
 "delete_action" = "Delete";
 "success_toast" = "Success";
+"create_date_sort" = "Sort by created date";
+"update_date_sort" = "Sort by edited date";
+"cancel_action" = "Cancel";

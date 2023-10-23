@@ -24,20 +24,40 @@ class NTNoteListViewModel: HasDisposeBag {
 
 extension NTNoteListViewModel: ViewModelType {
     func transform(input: Input) -> Output {
-        let handleItems = self.handleItems(input: .init(searchText: input.searchText))
+        let sortOption = PublishSubject<SortOption>()
+        
+        let handleItems = self.handleItems(input: .init(
+            searchText: input.searchText,
+            sortOption: sortOption.asObservable()
+        ))
         let newNote = self.handleCreateNew(input: .init(trigger: input.createNewTrigger))
         let editNote = handleEdit(input: .init(
-            selected: input.selected))
-        let delete = handleDelete(input: .init(trigger: input.deleteItem))
+            selected: input.selected, 
+            items: handleItems.notes))
+        let delete = handleDelete(input: .init(
+            trigger: input.deleteItem,
+            items: handleItems.notes))
+        let sort = handleSort(input: .init(
+            trigger: input.sortTrigger,
+            sourceItem: input.sortSourceItem
+        ))
+        
+        sort.sortOption.bind(to: sortOption)
+            .disposed(by: disposeBag)
         
         let pushable = Observable.merge(
             newNote.pushable,
             editNote.pushable
         )
+        
+        let popOver = Observable.merge(
+            delete.popOver,
+            sort.popOver
+        )
         return .init(
             items: handleItems.items.asDriver(),
             pushable: pushable.asSignal(), 
-            popOver: delete.popOver.asSignal(),
+            popOver: popOver.asSignal(),
             loading: delete.loading.asDriver(),
             error: delete.error.asSignal()
         )
@@ -50,6 +70,8 @@ extension NTNoteListViewModel {
         let createNewTrigger: Observable<Void>
         let searchText: Observable<String?>
         let deleteItem: Observable<Int>
+        let sortTrigger: Observable<Void>
+        let sortSourceItem: Observable<Any>
     }
     
     struct Output {

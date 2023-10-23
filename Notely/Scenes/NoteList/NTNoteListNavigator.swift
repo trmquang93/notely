@@ -9,7 +9,7 @@ import UIKit
 import VIPArchitechture
 import Platform
 
-protocol NTNoteListNavigatorType: NavigatorType, NTMakeNote, NTMakeToast {
+protocol NTNoteListNavigatorType: NavigatorType, NTMakeNote, NTMakeToast, NTMakeSort {
 }
 
 protocol NTMakeNoteList {

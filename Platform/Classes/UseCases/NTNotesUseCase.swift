@@ -14,11 +14,12 @@ import FirebaseFirestoreSwift
 class NTNotesUseCase: Domain.NTNotesUseCase {
     static let firestore = Firestore.firestore()
     
-    func getNotes() -> Observable<AnyCollection<Domain.NTNote>> {
+    func getNotes(sort: SortOption) -> Observable<AnyCollection<Domain.NTNote>> {
         return .create { obs in
             let listener = Self.firestore.collection("notes")
-                .order(by: "createDate", descending: true)
+                .order(by: sort.field, descending: !sort.ascending)
                 .addSnapshotListener { snapshot, error in
+                    debugPrint("sort by: \(sort)")
                     if let error = error {
                         obs.onError(error)
                     } else if let documents = snapshot?.documents {

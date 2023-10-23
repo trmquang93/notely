@@ -38,6 +38,8 @@
 		1BEBDF2F2AE6C75800BDBA66 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF2E2AE6C75700BDBA66 /* ActivityIndicator.swift */; };
 		1BEBDF312AE6C76B00BDBA66 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF302AE6C76B00BDBA66 /* ErrorTracker.swift */; };
 		1BEBDF382AE6C7F600BDBA66 /* NTToastNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */; };
+		1BEBDF432AE6F54E00BDBA66 /* NTSortNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF402AE6F54E00BDBA66 /* NTSortNavigator.swift */; };
+		1BEBDF452AE6FDA300BDBA66 /* NTNoteListViewModel+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBDF442AE6FDA300BDBA66 /* NTNoteListViewModel+Sort.swift */; };
 		8499A9FBAC748064BB7E16FF /* Pods_Notely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		1BEBDF2E2AE6C75700BDBA66 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1BEBDF302AE6C76B00BDBA66 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTToastNavigator.swift; sourceTree = "<group>"; };
+		1BEBDF402AE6F54E00BDBA66 /* NTSortNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTSortNavigator.swift; sourceTree = "<group>"; };
+		1BEBDF442AE6FDA300BDBA66 /* NTNoteListViewModel+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+Sort.swift"; sourceTree = "<group>"; };
 		4E90BFA4266843EAA8B7C16D /* Pods-Notely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.release.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.release.xcconfig"; sourceTree = "<group>"; };
 		84FDA5A503B3BE708D69CA1A /* Pods-Notely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notely.debug.xcconfig"; path = "Target Support Files/Pods-Notely/Pods-Notely.debug.xcconfig"; sourceTree = "<group>"; };
 		F518D81E697807D91AFB4ED8 /* Pods_Notely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 			children = (
 				1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */,
 				1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */,
+				1BEBDF442AE6FDA300BDBA66 /* NTNoteListViewModel+Sort.swift */,
 				1BDC3C2E2AE430320017225F /* NTNoteListNavigator.swift */,
 				1B584F1D2AE557DC00F06922 /* NTNoteListViewModel+Items.swift */,
 				1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */,
@@ -186,6 +191,7 @@
 		1BEBB2EB2AE3FEB300FC5D95 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1BEBDF3D2AE6F54100BDBA66 /* Sort */,
 				1BEBDF322AE6C7EB00BDBA66 /* Toast */,
 				1BDC3C2B2AE430210017225F /* NoteList */,
 				1BEBB2EC2AE3FEB600FC5D95 /* Note */,
@@ -232,6 +238,14 @@
 				1BEBDF352AE6C7F600BDBA66 /* NTToastNavigator.swift */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		1BEBDF3D2AE6F54100BDBA66 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBDF402AE6F54E00BDBA66 /* NTSortNavigator.swift */,
+			);
+			path = Sort;
 			sourceTree = "<group>";
 		};
 		805BB929ED26F19834F54558 /* Pods */ = {
@@ -427,6 +441,8 @@
 				1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */,
 				1BEBDF2F2AE6C75800BDBA66 /* ActivityIndicator.swift in Sources */,
 				1BEBB2E72AE3FB6700FC5D95 /* Application.swift in Sources */,
+				1BEBDF452AE6FDA300BDBA66 /* NTNoteListViewModel+Sort.swift in Sources */,
+				1BEBDF432AE6F54E00BDBA66 /* NTSortNavigator.swift in Sources */,
 				1BEBB2E92AE3FBBA00FC5D95 /* NTApplicationNavigator.swift in Sources */,
 				1BE5DF852AE03E37003C8844 /* AppDelegate.swift in Sources */,
 				1BEBB30C2AE415E600FC5D95 /* UIColor+Ext.swift in Sources */,

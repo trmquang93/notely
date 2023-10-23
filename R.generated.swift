@@ -63,7 +63,7 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 7 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
 
@@ -71,6 +71,16 @@ struct _R {
       ///
       /// Key: Home_title
       var home_title: RswiftResources.StringResource { .init(key: "Home_title", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
+
+      /// Value: Cancel
+      ///
+      /// Key: cancel_action
+      var cancel_action: RswiftResources.StringResource { .init(key: "cancel_action", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
+
+      /// Value: Sort by created date
+      ///
+      /// Key: create_date_sort
+      var create_date_sort: RswiftResources.StringResource { .init(key: "create_date_sort", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
 
       /// Value: Delete
       ///
@@ -86,6 +96,11 @@ struct _R {
       ///
       /// Key: success_toast
       var success_toast: RswiftResources.StringResource { .init(key: "success_toast", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
+
+      /// Value: Sort by edited date
+      ///
+      /// Key: update_date_sort
+      var update_date_sort: RswiftResources.StringResource { .init(key: "update_date_sort", tableName: "Localizable", source: source, developmentValue: nil, comment: nil) }
     }
   }
 
@@ -106,12 +121,15 @@ struct _R {
     var text: RswiftResources.ColorResource { .init(name: "text", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 1 images.
+  /// This `_R.image` struct is generated, and contains static references to 2 images.
   struct image {
     let bundle: Foundation.Bundle
 
     /// Image `create_note`.
     var create_note: RswiftResources.ImageResource { .init(name: "create_note", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `sort`.
+    var sort: RswiftResources.ImageResource { .init(name: "sort", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.

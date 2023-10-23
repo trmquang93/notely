@@ -8,10 +8,12 @@
 import Foundation
 import RxSwift
 import VIPArchitechture
+import Domain
 
 extension NTNoteListViewModel {
     struct DeleteInput {
         let trigger: Observable<Int>
+        let items: Observable<AnyCollection<NTNote>>
     }
     
     struct DeleteOutput {
@@ -21,7 +23,7 @@ extension NTNoteListViewModel {
     }
     
     func handleDelete(input: DeleteInput) -> DeleteOutput {
-        let notes = useCase.getNotes()
+        let notes = input.items
         let useCase = self.useCase
         let navigator = self.navigator
         let activityTracker = ActivityIndicator()

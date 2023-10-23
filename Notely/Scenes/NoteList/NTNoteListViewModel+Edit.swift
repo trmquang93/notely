@@ -13,6 +13,7 @@ import Domain
 extension NTNoteListViewModel {
     struct EditInput {
         let selected: Observable<Int>
+        let items: Observable<AnyCollection<NTNote>>
     }
     
     struct EditOutput {
@@ -21,7 +22,7 @@ extension NTNoteListViewModel {
     
     func handleEdit(input: EditInput) -> EditOutput {
         let navigator = self.navigator
-        let items = useCase.getNotes()
+        let items = input.items
         
         let noteSelected = input.selected
             .withLatestFrom(items) { $1.element(at: $0) }
@@ -36,7 +37,6 @@ extension NTNoteListViewModel {
                     documentType: .rtfd) {
                     let textRange = NSRange(location: 0, length: string.length)
                     string.addAttributes([.foregroundColor: R.color.text()!], range: textRange)
-//                    string.addAttributes(range: <#T##NSRange#>)
                     note.accept(input: .init(content: .just(string)))
                 }
                 return note

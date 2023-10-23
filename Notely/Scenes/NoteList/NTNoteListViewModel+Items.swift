@@ -8,18 +8,26 @@
 import Foundation
 import RxSwift
 import VIPArchitechture
+import Domain
 
-extension NTNoteListViewModel {
+extension NTNoteListViewModel {  
     struct ItemsInput {
         let searchText: Observable<String?>
+        let sortOption: Observable<SortOption>
     }
     
     struct ItemsOutput {
         let items: Observable<AnyCollection<NTNoteCellViewModel>>
+        let notes: Observable<AnyCollection<NTNote>>
     }
     
     func handleItems(input: ItemsInput) -> ItemsOutput {
-        let notes = useCase.getNotes()
+        let useCase = self.useCase
+        
+        let notes = input.sortOption
+            .startWith(.init(field: "createDate", ascending: false))
+            .flatMapLatest { useCase.getNotes(sort: $0) }
+            .share(replay: 1)
         
         let displayItems = Observable.combineLatest(input.searchText, notes)
             .map { searchText, notes in
@@ -40,6 +48,7 @@ extension NTNoteListViewModel {
             }
             .map { AnyCollection($0) }
             
-        return .init(items: displayItems)
+        return .init(items: displayItems, 
+                     notes: notes)
     }
 }

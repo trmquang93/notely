@@ -17,6 +17,8 @@ class NTNoteListViewController: UIViewController {
     lazy var titleLabel = UILabel()
     lazy var tableView = UITableView()
     lazy var createNewButton = UIButton()
+    lazy var sortButton = UIBarButtonItem(
+        image: R.image.sort(), style: .plain, target: nil, action: nil)
     
     let deleteItem = PublishRelay<IndexPath>()
     
@@ -47,7 +49,9 @@ class NTNoteListViewController: UIViewController {
             selected: selected,
             createNewTrigger: createNewButton.rx.tap.asObservable(), 
             searchText: searchBar.rx.text.asObservable(),
-            deleteItem: deleteItem.map { $0.row }
+            deleteItem: deleteItem.map { $0.row },
+            sortTrigger: sortButton.rx.tap.asObservable(),
+            sortSourceItem: .just(sortButton)
         ))
         
         output.items
@@ -166,5 +170,6 @@ extension NTNoteListViewController {
         
         let titleItem = UIBarButtonItem(customView: titleLabel)
         navigationItem.leftBarButtonItem = titleItem
+        navigationItem.rightBarButtonItem = sortButton
     }
 }
