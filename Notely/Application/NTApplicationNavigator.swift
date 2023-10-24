@@ -14,6 +14,9 @@ protocol NTApplicationNavigatorType: NavigatorType, NTMakePhoneRoot, NTMakePadRo
 
 struct NTApplicationNavigator: NTApplicationNavigatorType {
     func makeViewController() -> UIViewController {
+//#if DEBUG
+//        return makeRandomBackground().makeViewController()
+//#else
         var root: NavigatorType
         if UIDevice.current.userInterfaceIdiom == .phone {
             root = makePhoneRoot()
@@ -22,5 +25,11 @@ struct NTApplicationNavigator: NTApplicationNavigatorType {
         }
         
         return root.makeViewController()
+//#endif
     }
 }
+
+#if DEBUG
+extension NTApplicationNavigator: NTMakeRandomBackground { }
+#else
+#endif

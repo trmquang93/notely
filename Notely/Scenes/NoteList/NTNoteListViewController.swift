@@ -116,7 +116,7 @@ extension NTNoteListViewController {
     }
 
     private func setupViews() {
-        view.backgroundColor = R.color.background()
+        view.backgroundColor = .clear
         
         titleLabel.style {
             $0.font = .boldAppFont(ofSize: 24)
@@ -137,6 +137,7 @@ extension NTNoteListViewController {
             $0.backgroundColor = .clear
             $0.separatorStyle = .none
             $0.delegate = self
+            $0.showsVerticalScrollIndicator = false
         }
         
         tableView.rx.itemSelected

@@ -15,6 +15,14 @@
 		1B584F242AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */; };
 		1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */; };
 		1B84F1642AE54BFF0041D3AE /* NTNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84F1632AE54BFF0041D3AE /* NTNoteCell.swift */; };
+		1BC3F5072AE7575000255247 /* NTRandomBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F5042AE7575000255247 /* NTRandomBackgroundViewController.swift */; };
+		1BC3F5082AE7575000255247 /* NTRandomBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F5052AE7575000255247 /* NTRandomBackgroundViewModel.swift */; };
+		1BC3F5092AE7575000255247 /* NTRandomBackgroundNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F5062AE7575000255247 /* NTRandomBackgroundNavigator.swift */; };
+		1BC3F50B2AE7595900255247 /* NTRandomBackgroundViewModel+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F50A2AE7595900255247 /* NTRandomBackgroundViewModel+Image.swift */; };
+		1BC3F50E2AE75EC600255247 /* NTPhoneRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F50C2AE75EC600255247 /* NTPhoneRootViewController.swift */; };
+		1BC3F50F2AE75EC600255247 /* NTPhoneRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F50D2AE75EC600255247 /* NTPhoneRootViewModel.swift */; };
+		1BC3F5192AE7612900255247 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F5182AE7612900255247 /* NTViewController.swift */; };
+		1BC3F51B2AE7650800255247 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3F51A2AE7650800255247 /* UIImage+Ext.swift */; };
 		1BDC3C292AE423F00017225F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C282AE423F00017225F /* R.generated.swift */; };
 		1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */; };
 		1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */; };
@@ -69,6 +77,14 @@
 		1B584F232AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTNoteListViewModel+CreateNew.swift"; sourceTree = "<group>"; };
 		1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Ext.swift"; sourceTree = "<group>"; };
 		1B84F1632AE54BFF0041D3AE /* NTNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteCell.swift; sourceTree = "<group>"; };
+		1BC3F5042AE7575000255247 /* NTRandomBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTRandomBackgroundViewController.swift; sourceTree = "<group>"; };
+		1BC3F5052AE7575000255247 /* NTRandomBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTRandomBackgroundViewModel.swift; sourceTree = "<group>"; };
+		1BC3F5062AE7575000255247 /* NTRandomBackgroundNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTRandomBackgroundNavigator.swift; sourceTree = "<group>"; };
+		1BC3F50A2AE7595900255247 /* NTRandomBackgroundViewModel+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NTRandomBackgroundViewModel+Image.swift"; sourceTree = "<group>"; };
+		1BC3F50C2AE75EC600255247 /* NTPhoneRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTPhoneRootViewController.swift; sourceTree = "<group>"; };
+		1BC3F50D2AE75EC600255247 /* NTPhoneRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTPhoneRootViewModel.swift; sourceTree = "<group>"; };
+		1BC3F5182AE7612900255247 /* NTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
+		1BC3F51A2AE7650800255247 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		1BDC3C282AE423F00017225F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		1BDC3C2C2AE430320017225F /* NTNoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewController.swift; sourceTree = "<group>"; };
 		1BDC3C2D2AE430320017225F /* NTNoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNoteListViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +143,25 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		1BC3F5032AE7574400255247 /* RandomBackground */ = {
+			isa = PBXGroup;
+			children = (
+				1BC3F5042AE7575000255247 /* NTRandomBackgroundViewController.swift */,
+				1BC3F5052AE7575000255247 /* NTRandomBackgroundViewModel.swift */,
+				1BC3F5062AE7575000255247 /* NTRandomBackgroundNavigator.swift */,
+				1BC3F50A2AE7595900255247 /* NTRandomBackgroundViewModel+Image.swift */,
+			);
+			path = RandomBackground;
+			sourceTree = "<group>";
+		};
+		1BC3F5172AE7611900255247 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1BC3F5182AE7612900255247 /* NTViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		1BDC3C2B2AE430210017225F /* NoteList */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +207,7 @@
 		1BE5DF832AE03E37003C8844 /* Notely */ = {
 			isa = PBXGroup;
 			children = (
+				1BC3F5172AE7611900255247 /* Base */,
 				1BEBDF2D2AE6C75000BDBA66 /* Helpers */,
 				1B84F1622AE54AFF0041D3AE /* CustomViews */,
 				1BDC3C322AE43EAC0017225F /* Localizable */,
@@ -199,6 +235,7 @@
 		1BEBB2EB2AE3FEB300FC5D95 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1BC3F5032AE7574400255247 /* RandomBackground */,
 				1BEBDF502AE7162C00BDBA66 /* PhoneRoot */,
 				1BEBDF462AE70B3700BDBA66 /* PadRoot */,
 				1BEBDF3D2AE6F54100BDBA66 /* Sort */,
@@ -229,6 +266,7 @@
 				1B584F192AE5540B00F06922 /* RegisterCells.swift */,
 				1B584F1B2AE554D900F06922 /* DateFormatter.swift */,
 				1B584F252AE57D9700F06922 /* UiViewController+Ext.swift */,
+				1BC3F51A2AE7650800255247 /* UIImage+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				1BEBDF532AE7163E00BDBA66 /* NTPhoneRootNavigator.swift */,
+				1BC3F50C2AE75EC600255247 /* NTPhoneRootViewController.swift */,
+				1BC3F50D2AE75EC600255247 /* NTPhoneRootViewModel.swift */,
 			);
 			path = PhoneRoot;
 			sourceTree = "<group>";
@@ -457,16 +497,22 @@
 				1BEBB2F22AE3FECA00FC5D95 /* NTNoteViewModel.swift in Sources */,
 				1BEBDF4C2AE70B4F00BDBA66 /* NTPadRootNavigator.swift in Sources */,
 				1B84F1642AE54BFF0041D3AE /* NTNoteCell.swift in Sources */,
+				1BC3F5072AE7575000255247 /* NTRandomBackgroundViewController.swift in Sources */,
 				1B584F242AE577D800F06922 /* NTNoteListViewModel+CreateNew.swift in Sources */,
 				1BEBB2F32AE3FECA00FC5D95 /* NTNoteNavigator.swift in Sources */,
+				1BC3F51B2AE7650800255247 /* UIImage+Ext.swift in Sources */,
 				1BEBDF2C2AE6BFE300BDBA66 /* NTNoteListViewModel+Delete.swift in Sources */,
 				1BDC3C302AE430320017225F /* NTNoteListViewModel.swift in Sources */,
 				1BEBDF4A2AE70B4F00BDBA66 /* NTPadRootViewController.swift in Sources */,
 				1BEBB2F12AE3FECA00FC5D95 /* NTNoteViewController.swift in Sources */,
+				1BC3F50B2AE7595900255247 /* NTRandomBackgroundViewModel+Image.swift in Sources */,
 				1BEBB30A2AE413F800FC5D95 /* ObservableType+.swift in Sources */,
+				1BC3F5192AE7612900255247 /* NTViewController.swift in Sources */,
 				1B584F1A2AE5540B00F06922 /* RegisterCells.swift in Sources */,
 				1B584F1E2AE557DC00F06922 /* NTNoteListViewModel+Items.swift in Sources */,
 				1BEBDF382AE6C7F600BDBA66 /* NTToastNavigator.swift in Sources */,
+				1BC3F5092AE7575000255247 /* NTRandomBackgroundNavigator.swift in Sources */,
+				1BC3F5082AE7575000255247 /* NTRandomBackgroundViewModel.swift in Sources */,
 				1B584F1C2AE554D900F06922 /* DateFormatter.swift in Sources */,
 				1B584F262AE57D9700F06922 /* UiViewController+Ext.swift in Sources */,
 				1BEBDF2F2AE6C75800BDBA66 /* ActivityIndicator.swift in Sources */,
@@ -479,11 +525,13 @@
 				1BDC3C312AE430320017225F /* NTNoteListNavigator.swift in Sources */,
 				1BDC3C2F2AE430320017225F /* NTNoteListViewController.swift in Sources */,
 				1BEBDF312AE6C76B00BDBA66 /* ErrorTracker.swift in Sources */,
+				1BC3F50E2AE75EC600255247 /* NTPhoneRootViewController.swift in Sources */,
 				1BEBB2FE2AE40AFD00FC5D95 /* NTNoteViewModel+TypingAttributes.swift in Sources */,
 				1BEBDF562AE7163E00BDBA66 /* NTPhoneRootNavigator.swift in Sources */,
 				1BEBDF4B2AE70B4F00BDBA66 /* NTPadRootViewModel.swift in Sources */,
 				1BDC3C292AE423F00017225F /* R.generated.swift in Sources */,
 				1B38773A2AE59285001F227C /* NTNoteListViewModel+Edit.swift in Sources */,
+				1BC3F50F2AE75EC600255247 /* NTPhoneRootViewModel.swift in Sources */,
 				1BEBB3082AE412DA00FC5D95 /* UIFont+Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,7 +685,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,7 +715,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

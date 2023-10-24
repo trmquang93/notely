@@ -23,10 +23,12 @@ extension NTPadRootViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         let noteList = navigator.makeNoteList()
         let note = noteList.output.flatMap { $0.selected }
+        let background = navigator.makeRandomBackground()
         
         return .init(
             noteList: .just(noteList),
-            noteDetail: note.asDriver().map { $0 })
+            noteDetail: note.asDriver().map { $0 }, 
+            background: .just(background))
     }
 }
 
@@ -37,5 +39,6 @@ extension NTPadRootViewModel {
     struct Output {
         let noteList: Driver<Child>
         let noteDetail: Driver<Child>
+        let background: Driver<Child>
     }
 }

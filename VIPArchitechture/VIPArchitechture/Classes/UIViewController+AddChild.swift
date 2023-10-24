@@ -17,6 +17,7 @@ public extension UIViewController {
         
         guard let child = child else { return }
         let childView: UIView = child.view
+        childView.backgroundColor = .clear
         child.willMove(toParent: self)
         
         view.addSubview(childView)

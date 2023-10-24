@@ -12,7 +12,7 @@ import Stevia
 
 class NTPadRootViewController: UIViewController {
     let viewModel: NTPadRootViewModel
-    
+    lazy var backgroundView = UIView()
     lazy var noteListView = UIView()
     lazy var separator = UIView()
     lazy var noteDetailView = UIView()
@@ -43,12 +43,17 @@ class NTPadRootViewController: UIViewController {
         output.noteDetail
             .drive(rx.child(in: noteDetailView))
             .disposed(by: rx.disposeBag)
+        
+        output.background
+            .drive(rx.child(in: backgroundView))
+            .disposed(by: rx.disposeBag)
     }
 }
 
 extension NTPadRootViewController {
     private func createViews() {
         view.subviews {
+            backgroundView
             noteListView
             noteDetailView
             separator
@@ -70,10 +75,13 @@ extension NTPadRootViewController {
         separator
             .width(1)
             .fillVertically()
+        
+        backgroundView
+            .fillContainer()
     }
 
     private func setupViews() {
-        view.backgroundColor = R.color.background()
+        view.backgroundColor = .clear
         
         separator.backgroundColor = R.color.secondaryBackground()
     }

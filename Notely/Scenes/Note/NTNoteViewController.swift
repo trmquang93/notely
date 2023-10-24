@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Stevia
 
-class NTNoteViewController: UIViewController {
+class NTNoteViewController: NTViewController {
     let viewModel: NTNoteViewModel
 
     lazy var textView = UITextView()
@@ -68,7 +68,8 @@ extension NTNoteViewController {
     }
 
     private func setupViews() {
-        textView.backgroundColor = R.color.background()
+        textView.backgroundColor = .clear
+        view.backgroundColor = R.color.background()
         textView.allowsEditingTextAttributes = true
     }
 }

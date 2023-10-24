@@ -8,7 +8,7 @@
 import UIKit
 import VIPArchitechture
 
-protocol NTPadRootNavigatorType: NavigatorType, NTMakeNote, NTMakeNoteList {
+protocol NTPadRootNavigatorType: NavigatorType, NTMakeNoteList, NTMakeRandomBackground {
 }
 
 protocol NTMakePadRoot {

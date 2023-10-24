@@ -110,7 +110,7 @@ public extension Reactive where Base: UIViewController {
             .mapToVoid()
     }
     
-    var viewHasSize: Driver<Void> {
+    var viewHasSize: Observable<Void> {
         return didLayoutSubviews
             .startWith(())
             .observe(on: MainScheduler.instance)
@@ -119,7 +119,6 @@ public extension Reactive where Base: UIViewController {
                 return base.view.frame != .zero
             }
             .take(1)
-            .asDriverOnErrorJustComplete()
     }
 }
 

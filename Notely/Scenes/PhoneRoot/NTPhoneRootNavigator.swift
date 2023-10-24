@@ -8,7 +8,7 @@
 import UIKit
 import VIPArchitechture
 
-protocol NTPhoneRootNavigatorType: NavigatorType, NTMakeNoteList {
+protocol NTPhoneRootNavigatorType: NavigatorType, NTMakeNoteList, NTMakeRandomBackground {
 }
 
 protocol NTMakePhoneRoot {
@@ -23,15 +23,8 @@ extension NTMakePhoneRoot {
 
 struct NTPhoneRootNavigator: NTPhoneRootNavigatorType {
     func makeViewController() -> UIViewController {
-        let noteList = makeNoteList()
-        let viewController = noteList.makeViewController()
-        
-        noteList.output.flatMap { $0.selected }
-            .map { $0 as Pushable }
-            .asDriver()
-            .drive(viewController.rx.pushable)
-            .disposed(by: viewController.rx.disposeBag)
-        
-        return viewController
+        let viewModel = NTPhoneRootViewModel(navigator: self)
+        let viewController = NTPhoneRootViewController(viewModel: viewModel)
+        return UINavigationController(rootViewController: viewController)
     }
 }
