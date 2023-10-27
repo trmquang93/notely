@@ -9,6 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+public typealias Observable = RxSwift.Observable
+
 extension ObservableType {
     
     public func catchErrorJustComplete() -> Observable<Element> {
