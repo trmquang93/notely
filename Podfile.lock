@@ -746,18 +746,18 @@ PODS:
     - RxRealm
   - PromisesObjC (2.3.1)
   - R.swift (7.3.2)
-  - Realm (10.43.0):
-    - Realm/Headers (= 10.43.0)
-  - Realm/Headers (10.43.0)
-  - RealmSwift (10.43.0):
-    - Realm (= 10.43.0)
+  - Realm (10.43.1):
+    - Realm/Headers (= 10.43.1)
+  - Realm/Headers (10.43.1)
+  - RealmSwift (10.43.1):
+    - Realm (= 10.43.1)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
   - RxGesture (4.0.4):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
-  - RxRealm (5.0.4):
+  - RxRealm (5.0.5):
     - Realm (~> 10.21)
     - RealmSwift (~> 10.21)
     - RxCocoa (~> 6.1)
@@ -779,6 +779,7 @@ DEPENDENCIES:
   - R.swift
   - RxCocoa
   - RxGesture
+  - "RxRealm (from `git@github.com:trmquang93/RxRealm.git`)"
   - SteviaLayout
   - SwiftLint
   - SwipeCellKit
@@ -807,7 +808,6 @@ SPEC REPOS:
     - RealmSwift
     - RxCocoa
     - RxGesture
-    - RxRealm
     - RxRelay
     - RxSwift
     - SteviaLayout
@@ -819,8 +819,15 @@ EXTERNAL SOURCES:
     :path: Domain
   Platform:
     :path: Platform
+  RxRealm:
+    :git: "git@github.com:trmquang93/RxRealm.git"
   VIPArchitechture:
     :path: VIPArchitechture
+
+CHECKOUT OPTIONS:
+  RxRealm:
+    :commit: 40c093dce8231640b1d51bda518fb7da60b00501
+    :git: "git@github.com:trmquang93/RxRealm.git"
 
 SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
@@ -842,11 +849,11 @@ SPEC CHECKSUMS:
   Platform: fd1236ea129ff4997754a547f011784c84852ec3
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
-  Realm: fc65bea3f5c3da2ecdc76324f180e054e7cf4eb0
-  RealmSwift: a7d48361c585769690c175428cc2bf15e1074444
+  Realm: d97b438de77459e443bd2c8ad5ca0f95107aee4b
+  RealmSwift: 6be3f27a7fd3f5cc8f99f4b187cc4e7150299e32
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
-  RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
+  RxRealm: c1bf40ad00e73137ccd55b9ed36bf384d560bf17
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SteviaLayout: 05424e528d643657d39ce72c786e4adf13cfc5f2
@@ -854,6 +861,6 @@ SPEC CHECKSUMS:
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
   VIPArchitechture: ff1a42ef826dbe637b6a79e976d9b8e48205974e
 
-PODFILE CHECKSUM: 9d8f534ff4bc2bb6f601444dc58162418205f153
+PODFILE CHECKSUM: 75e81a6f807b870b51a229e2e37197013cefb8c0
 
 COCOAPODS: 1.13.0

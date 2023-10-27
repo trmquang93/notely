@@ -18,6 +18,7 @@ target 'Notely' do
   pod 'MBProgressHUD'
   pod 'SwipeCellKit'
   pod 'RxGesture'
+  pod 'RxRealm', git: 'git@github.com:trmquang93/RxRealm.git'
 end
 
 post_install do |installer|
